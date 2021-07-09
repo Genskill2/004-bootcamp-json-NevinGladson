@@ -56,12 +56,12 @@ def diagnose(f):
   data = compute_correlations(f)
   max_positive = 0
   min_negative=0
-  for i in data.values():
-    if i > max_positive:
-      max_positive = i
-    elif i < min_negative:
-      min_negative = i
-      
-  return max_positive, min_negative
-      
+  for i in data.keys():
+    if data[i] > max_positive:
+      max_positive = data[i]
+      max_event = i
+    elif data[i] < min_negative:
+      min_negative = data[i]
+      min_event = i
+  return max_event, min_event
 
