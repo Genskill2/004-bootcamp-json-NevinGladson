@@ -64,5 +64,4 @@ def diagnose(f):
       
   return max_positive, min_negative
       
-diagnose("journal.json")
 
